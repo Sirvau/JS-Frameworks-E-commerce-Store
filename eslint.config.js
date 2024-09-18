@@ -16,6 +16,11 @@ export default [
     "quotes": ["error", "double"],
     "react/react-in-jsx-scope": "off"
 },
+"eslint.validate": [
+  "javascript",
+  "javascriptreact"
+]
+
   },
 
 
