@@ -11,6 +11,14 @@ export default {
           primary: ['Instrument Sans', 'sans-serif'],
           logo: ['Mouse Memoirs', 'sans-serif'],
         },
+        colors: {
+          'light-beige': '#F5F1EB',
+          'dark-brown': '#463D35',
+          'oak-brown': '#6F390D',
+          'md-beige': '#EBE3D8',
+        
+        },
+       
       },
     },
     plugins: [],
