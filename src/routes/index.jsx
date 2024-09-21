@@ -16,7 +16,7 @@ function RoutePaths() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="contact" element={<ContactPage />} />
-          <Route path="individual-product" element={<IndividualProductPage />} />
+          <Route path="individual-product/:id" element={<IndividualProductPage />} />
           <Route path="checkout" element={<CheckoutPage />} />
           <Route path="checkout-success" element={<CheckoutSuccessPage />} />
           <Route path="*" element={<RouteNotFound />} />
