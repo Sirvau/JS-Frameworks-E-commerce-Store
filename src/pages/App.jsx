@@ -1,21 +1,13 @@
 
-import Layout from '../components/layout'
-import '../styles/index.css'
 
-
-
-
-
+import RoutePaths from "../routes"
 
 
 function App() {
   
-
-
   return (
     <div>
-      <Layout/>
-
+    <RoutePaths/>
   </div>
   )
 }

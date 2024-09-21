@@ -1,10 +1,16 @@
+
+import { Link } from "react-router-dom";
+
 function SomeLinks() {
     return (
       <div className="flex space-x-4">
-      <a href="https://x.com" aria-label="X-Twitter"><i className="fa-brands fa-square-x-twitter "></i>
-      </a>
-      <a href="https://facebook.com" aria-label="Facebook"><i className="fa-brands fa-facebook"></i>
-      </a>
+         <Link to="https://x.com"><i className="fa-brands fa-square-x-twitter "></i>
+         </Link>
+         <Link to="https://facebook.com"><i className="fa-brands fa-facebook"></i>
+        </Link>
+      
+      
+     
     </div>
     )
   }
