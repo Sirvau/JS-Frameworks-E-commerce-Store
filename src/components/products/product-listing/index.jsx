@@ -1,11 +1,11 @@
 import React from 'react';
 import useApi from '../../../hooks/api';
-
+import ProductCard from '../product-card'; 
 
 function ProductList() {
-    const { products, isLoading, isError } = useApi(
-        'https://v2.api.noroff.dev/online-shop',
-      );
+  const { products, isLoading, isError } = useApi(
+    'https://v2.api.noroff.dev/online-shop',
+  );
 
   if (isLoading) {
     return <div>Loading products...</div>;
@@ -16,14 +16,10 @@ function ProductList() {
   }
 
   return (
-    <div>
-      <ul>
+    <div >
+      <ul className="flex flex-col sm:flex-row flex-wrap content-center justify-center">
         {products.map((product) => (
-          <li key={product.id}>
-             <img src={product.image.url} alt={product.image.alt || product.title} />
-            <h2>{product.title}</h2>
-            <p>Price: {product.discountedPrice} (original: {product.price})</p>
-          </li>
+          <ProductCard key={product.id} product={product} /> 
         ))}
       </ul>
     </div>
