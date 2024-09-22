@@ -1,30 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useApi from '../../../hooks/api';
 
-const url = 'https://v2.api.noroff.dev/online-shop';
 
 function ProductList() {
-  const [products, setProducts] = useState([]); 
-  const [isLoading, setIsLoading] = useState(false); 
-  const [isError, setIsError] = useState(false); 
-
-  useEffect(() => {
-    async function getData() {
-      try {
-        setIsError(false); 
-        setIsLoading(true); 
-        const response = await fetch(url);
-        const json = await response.json();
-        console.log(json); 
-        setProducts(json.data);
-        setIsLoading(false); 
-      } catch (error) {
-        setIsLoading(false);
-        setIsError(true); 
-      }
-    }
-
-    getData();
-  }, []);
+    const { products, isLoading, isError } = useApi(
+        'https://v2.api.noroff.dev/online-shop',
+      );
 
   if (isLoading) {
     return <div>Loading products...</div>;
