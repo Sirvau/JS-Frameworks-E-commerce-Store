@@ -8,7 +8,7 @@ import Copyright from './copyright';
 
 function Footer() {
   return (
-    <footer className=" py-8">
+    <footer className=" py-8 mt-52">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         <Logo/>
         <NavFooter/>
