@@ -1,10 +1,8 @@
-
 import ProductCard from '../product-card'; 
 import useApi from '../../../hooks/api';
 
-
 function ProductList() {
-  const { products, isLoading, isError } = useApi(
+  const { data: products, isLoading, isError } = useApi(
     'https://v2.api.noroff.dev/online-shop',
   );
 
@@ -16,14 +14,17 @@ function ProductList() {
     return <div>Error loading data</div>;
   }
 
+  if (!products || products.length === 0) {
+    return <div>No products found</div>;
+  }
+
   return (
-    <div >
+    <div>
       <ul className="flex flex-col sm:flex-row flex-wrap content-center justify-center">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} /> 
         ))}
       </ul>
-
     </div>
   );
 }
