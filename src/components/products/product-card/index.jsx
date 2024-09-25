@@ -1,4 +1,6 @@
-import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 
 function ProductCard({ product }) {
   const hasDiscount = product.discountedPrice < product.price;
@@ -7,20 +9,22 @@ function ProductCard({ product }) {
     : 0;
 
   return (
-    <li className="mx-4">
-      <div className="my-4 sm:mx-6 flex flex-col shadow-md w-80 sm:w-70 md:w-60">
+    <li className="mx-4 tracking-wide ">
+           <Link to={`/individual-product/${product.id}`}>
+      <div className="my-4 sm:mx-6 flex flex-col shadow-lg w-80 sm:w-70 md:w-60 bg-beige ">
+ 
         <img
-          className="brightness-90 h-[250px] w-full object-cover sm:h-[200px]"
+          className="brightness-90 h-[250px] w-full object-cover sm:h-[200px]  px-4 pt-4"
           src={product.image.url}
           alt={product.image.alt || product.title}
         />
-        <h2 className="ps-4 pt-4">{product.title}</h2>
+        <h2 className=" pt-4 uppercase text-center text-lg md:text-xl font-semibold ">{product.title}</h2>
         <div className="flex flex-row justify-between mt-2">
           <div className="py-2 ps-4">
             {hasDiscount ? (
               <>
-                <p>{product.discountedPrice} kr.</p>
-                <p className="line-through">{product.price} kr.</p>
+                <p className="font-semibold">{product.discountedPrice} kr.</p>
+                <p className="line-through font-normal">{product.price} kr.</p>
               </>
             ) : (
               <p>{product.price} kr.</p>
@@ -32,10 +36,12 @@ function ProductCard({ product }) {
             </p>
           )}
         </div>
-        <button className="bg-dark-brown text-light-beige px-5 py-4 mx-auto my-6">
-          View Product
+       
+        <button className="bg-dark-brown text-light-beige font-semibold  px-24 sm:px-12 py-4 mx-auto my-6 rounded-xl">
+          View product 
         </button>
       </div>
+      </Link>
     </li>
   );
 }
