@@ -11,7 +11,7 @@ function ProductCard({ product }) {
   return (
     <li className="mx-4 tracking-wide ">
            <Link to={`/individual-product/${product.id}`}>
-      <div className="my-4 sm:mx-6 flex flex-col shadow-lg w-80 sm:w-70 md:w-60 bg-beige ">
+      <div className="my-4 sm:mx-6 flex flex-col  shadow-lg w-80 sm:w-70 md:w-60 bg-light-beige">
  
         <img
           className="brightness-90 h-[250px] w-full object-cover sm:h-[200px]  px-4 pt-4"
@@ -24,7 +24,7 @@ function ProductCard({ product }) {
             {hasDiscount ? (
               <>
                 <p className="font-semibold">{product.discountedPrice} kr.</p>
-                <p className="line-through font-normal">{product.price} kr.</p>
+                <p className="line-through font-medium">{product.price} kr.</p>
               </>
             ) : (
               <p>{product.price} kr.</p>
@@ -37,7 +37,7 @@ function ProductCard({ product }) {
           )}
         </div>
        
-        <button className="bg-dark-brown text-light-beige font-semibold  px-24 sm:px-12 py-4 mx-auto my-6 rounded-xl">
+        <button className="bg-dark-brown text-light-beige font-semibold  px-24 sm:px-12 py-3 mx-auto my-6 rounded-xl">
           View product 
         </button>
       </div>

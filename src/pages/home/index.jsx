@@ -4,9 +4,9 @@ import ProductList from "../../components/products/product-listing"
 
 function HomePage() {
     return ( 
-    <div >
-     <div className="ps-20">
-     <h1 className="uppercase text-2xl md:text-3xl tracking-wide">Products</h1>    
+    <div className="" >
+     <div>
+     <h1 className="uppercase text-2xl mx-4  tracking-wide">Products</h1>    
      <hr className="mb-5"></hr>
      </div>
       
