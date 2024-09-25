@@ -1,10 +1,14 @@
-import { useParams } from "react-router-dom"
+
+import IndividualProduct from "../../components/products/individual-product"
+
+
 
 function IndividualProductPage() {
-    let params = useParams()
-    console.log(params)
     return ( 
-    <div>Placeholder for Individual Product Page: {params.id}</div>
+    <div>
+    <IndividualProduct/>
+    </div>
+
     )
   }
 export default IndividualProductPage
