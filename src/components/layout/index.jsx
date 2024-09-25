@@ -5,7 +5,7 @@ import Footer from "./footer";
 function Layout() {
 
     return ( 
-      <div className="mx-auto px-2 max font-primary text-dark-brown">
+      <div className="md:mx-20 max lg:mx-24 max font-primary text-dark-brown">
       <Header/>
       <Outlet/>
       <Footer/>

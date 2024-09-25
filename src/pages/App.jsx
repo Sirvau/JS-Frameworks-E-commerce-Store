@@ -6,7 +6,7 @@ import RoutePaths from "../routes"
 function App() {
   
   return (
-    <div>
+    <div className=" bg-light-beige">
     <RoutePaths/>
   </div>
   )
