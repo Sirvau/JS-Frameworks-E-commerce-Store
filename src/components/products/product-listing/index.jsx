@@ -1,5 +1,6 @@
 import ProductCard from '../product-card'; 
 import useApi from '../../../hooks/api';
+import ProductFilter from '../product-filter-search';
 
 
 function ProductList() {
@@ -21,6 +22,7 @@ function ProductList() {
 
   return (
     <div>
+       <ProductFilter products={products}/>
       <ul className="flex flex-col sm:flex-row flex-wrap content-center justify-center">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} /> 
