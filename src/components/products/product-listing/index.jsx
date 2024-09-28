@@ -1,6 +1,7 @@
 import ProductCard from '../product-card'; 
 import useApi from '../../../hooks/api';
 
+
 function ProductList() {
   const { data: products, isLoading, isError } = useApi(
     'https://v2.api.noroff.dev/online-shop',
@@ -25,6 +26,7 @@ function ProductList() {
           <ProductCard key={product.id} product={product} /> 
         ))}
       </ul>
+     
     </div>
   );
 }

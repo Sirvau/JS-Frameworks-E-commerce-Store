@@ -18,6 +18,7 @@ export default {
           'dark-brown': '#463D35',
           'oak-brown': '#6F390D',
           'md-beige': '#EBE3D8',
+          'light-orange': '#EFBE95',
         
         },
        

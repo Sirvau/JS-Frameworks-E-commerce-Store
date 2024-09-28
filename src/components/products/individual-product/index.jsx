@@ -1,5 +1,7 @@
 import useApi from '../../../hooks/api';
 import { useParams } from 'react-router-dom';
+import ReviewList from '../product-reviews/review-list';
+
 
 
 
@@ -27,7 +29,9 @@ function IndividualProduct() {
     : 0;
 
   return (
+    <div>
     <div className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-center mt-20 md:mx-10 lg:mx-16 xl:mx-20  shadow-md bg-light-beige ">
+    
       <div className="w-80 ">
       <img className="h-[320px] sm:h-[380px] w-full object-cover" src={product.image.url} alt={product.image.alt || product.title} />
       {hasDiscount && (
@@ -43,7 +47,7 @@ function IndividualProduct() {
      
        
         <p className="font-medium mt-2 sm:mt-6 ">{product.description}</p>
-        <hr></hr>
+   
         <div className="flex justify-around mt-6 sm:mt-12">
         {hasDiscount ? (
               <>
@@ -57,7 +61,16 @@ function IndividualProduct() {
         <button className="bg-oak-brown text-light-beige font-semibold px-28 sm:px-20 py-3 mx-auto my-6 mt-6 sm:mt-12 rounded-xl flex justify-self-center ">Add to bag</button>
       </div>
       </div>
-  
+      <section className="mt-32 py-6 bg-md-beige">
+        <h1 className="uppercase text-2xl ps-6">Reviews</h1>
+        <hr className="my-4 mx-6 border-dark-brown"></hr>
+        <div className="mx-6"> <ReviewList reviews={product.reviews} /></div>
+       
+      
+      </section>
+    
+      
+      </div>
        
    
   );
@@ -65,13 +78,5 @@ function IndividualProduct() {
 
 export default IndividualProduct;
 
-function Reviews() {
 
-  return (
-    <div>
-      <p>{product.reviews}</p>
-    </div>
-  );
- 
-}
 
