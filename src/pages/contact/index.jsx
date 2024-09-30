@@ -1,6 +1,11 @@
+import ContactForm from "../../components/contact"
+
 function ContactPage() {
     return ( 
-    <div>Placeholder for ContactPage</div>
+    <div>
+      <ContactForm/>
+    </div>
+
     )
   }
 export default ContactPage 
