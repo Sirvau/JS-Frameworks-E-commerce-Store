@@ -1,17 +1,17 @@
 import { useCart } from "../../context/cart-context";
 
 const CartList = () => {
-  const { cart } = useCart();
+  const { cart, addToCart, removeFromCart } = useCart();
 
   return (
     <div>
       <ul>
         {cart.length === 0 ? (
-          <p>Your cart is empty.</p>
+          <p className="my-40 text-center text-xl">Your cart is empty.</p>
         ) : (
           cart.map((product, index) => (
             <div key={product.id}>
-              <li className="flex flex-row justify-center items-end mb-4 relative mx-4 my-4 text-xs font-medium tracking-wide">
+              <li className="flex flex-row justify-center items-end mb-4 relative mx-4 my-4 text-xs font-medium tracking-wider">
                 <button>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -34,15 +34,25 @@ const CartList = () => {
                     src={product.image.url}
                     alt={product.image.alt || product.title}
                   />
+                   <div className="flex justify-evenly mt-2">
+                            <button onClick={() => removeFromCart(product.id)}><svg xmlns="http://www.w3.org/2000/svg" fill="#6F390D" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#F5F1EB" className="size-8">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </button>
+                            <button onClick={() => addToCart(product)}><svg xmlns="http://www.w3.org/2000/svg" fill="#6F390D" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#F5F1EB" className="size-8">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </button>
+                        </div>
                 </div>
                 <div className="w-2/3 sm:w-5/6 ">
-                  <div className="flex flex-col items-center mb-4">
+                  <div className="flex flex-col items-center mb-2">
                     <h3 className=" mx-2 font-semibold uppercase text-sm text-center ">{product.title}</h3>
                   
                   </div>
 
                   {product.discountedPrice < product.price ? (
-                    <div className="flex flex-row  justify-center sm:text-sm mb-4">
+                    <div className="flex flex-row  justify-center sm:text-sm mb-10">
                       <p className="font-semibold text-red-600 me-2">
                         {product.discountedPrice} kr.
                       </p>
@@ -52,15 +62,29 @@ const CartList = () => {
                   
                     </div>
                   ) : (
-                    <div className="flex flex-row justify-center mb-4 sm:text-sm">
+                    <div className="flex flex-row justify-center sm:text-sm mb-10">
                       <p className="font-semibold">{product.price} kr.</p>
                  
                     </div>
                   )}
                   <div className="flex justify-center mx-2">
-                  <p className=" uppercase me-2">Count: X</p>
-                  <p className=" uppercase ms-2">Total: xxx</p>
+                    <div className="flex flex-col items-center">
+                        
+                        <p className=" uppercase me-2 mb-2">Quantity</p>
+                
+                        <p className="font-semibold">{product.quantity}</p>
+                       
                   </div>
+                  <div className="flex flex-col items-center">
+                  <p className="uppercase mb-2">Total</p>
+               
+                  <p className="font-semibold">xxx ,-</p>
+                  </div>
+              
+                 
+                  </div>
+                 
+              
                       
                 </div>
               </li>
