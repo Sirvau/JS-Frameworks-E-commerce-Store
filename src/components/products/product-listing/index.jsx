@@ -3,10 +3,10 @@ import useApi from '../../../hooks/api';
 import ProductFilter from '../product-filter-search';
 
 
+
+
 function ProductList() {
-  const { data: products, isLoading, isError } = useApi(
-    'https://v2.api.noroff.dev/online-shop',
-  );
+  const { data: products, isLoading, isError } = useApi("https://v2.api.noroff.dev/online-shop");
 
   if (isLoading) {
     return <div>Loading products...</div>;

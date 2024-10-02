@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client'
 import {App} from './pages'
 import './styles/index.css'
 import { BrowserRouter } from 'react-router-dom'
+import { CartProvider } from './context/cart-context'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+    <CartProvider>
      <App />
+     </CartProvider>
     </BrowserRouter>
   </React.StrictMode>
 )
