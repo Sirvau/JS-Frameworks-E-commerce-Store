@@ -8,7 +8,7 @@ function HomePage() {
     <div className="" >
      <div>
      <h1 className="uppercase text-2xl mx-4  tracking-wide">Products</h1>    
-     <hr className="my-4 border-dark-brown"></hr>
+     <hr className="my-4 border-dark-brown opacity-30"></hr>
      </div>
    
       <ProductList/>
