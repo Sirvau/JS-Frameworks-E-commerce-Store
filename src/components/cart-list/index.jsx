@@ -53,7 +53,7 @@ const CartList = () => {
 
                   {product.discountedPrice < product.price ? (
                     <div className="flex flex-row  justify-center sm:text-sm mb-10">
-                      <p className="font-semibold text-red-600 me-2">
+                      <p className="font-semibold text-red-400 me-2">
                         {product.discountedPrice} kr.
                       </p>
                       <p className="line-through text-gray-500 ms-2">
@@ -89,14 +89,14 @@ const CartList = () => {
                 </div>
               </li>
             
-              <hr className="my-4 border-dark-brown w-full"></hr>
+              <hr className="my-4  border-oak-brown opacity-30 w-full"></hr>
             </div>
           ))
         )}
         <div className="flex flex-row justify-end mt-12">
             <div>
             <p className="uppercase me-6 text-center mb-2 font-semibold ">Total amount</p>
-            <hr className="mb-4 me-6 border-dark-brown"></hr>
+            <hr className="mb-4 me-6 border-oak-brown opacity-30 "></hr>
             <p className="uppercase me-6 text-center text-sm font-medium">xxx ,- Nok.</p>
             </div>
       
