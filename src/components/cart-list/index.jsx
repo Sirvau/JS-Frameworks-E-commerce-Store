@@ -1,8 +1,7 @@
 import { useCart } from "../../context/cart-context";
-import { Link } from "react-router-dom";
 
 const CartList = () => {
-  const { cart, addToCart, removeFromCart, totalPrice, clearCart, clearItemFromCart } = useCart();
+  const { cart, addToCart, removeFromCart, totalPrice, clearItemFromCart } = useCart();
 
   return (
     <div>
@@ -119,11 +118,6 @@ const CartList = () => {
             </p>
           </div>
         </div>
-        <Link to={`/checkout-success/`}>
-        <button onClick={() => clearCart()} className="flex justify-items-center bg-oak-brown text-light-beige font-semibold  px-24 sm:px-12 py-3 mx-auto my-6 rounded-xl uppercase tracking-widest">
-          Checkout 
-        </button>
-        </Link>
     </div>
   );
 };
