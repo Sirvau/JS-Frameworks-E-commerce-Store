@@ -19,6 +19,7 @@ export default {
           'oak-brown': '#6F390D',
           'md-beige': '#EBE3D8',
           'light-orange': '#EFBE95',
+          'filter-brown': '#706256'
         
         },
        
