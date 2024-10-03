@@ -25,25 +25,25 @@ function ContactForm() {
         <div className="flex flex-col mx-4 px-5 py-5">
           <div className="mb-1">
             <label htmlFor="full-name">Full name</label>
-            <input name="full-name" type="text" className="form-input bg-light-beige px-4 rounded-lg w-full border-0 shadow-sm" {...register('fullName')} />
+            <input name="full-name" type="text" className="form-input bg-light-beige hover:brightness-105 duration-300 px-4 rounded-lg w-full border-0 shadow-sm" {...register('fullName')} />
             <p className="text-xs font-medium mt-1 tracking-wide">{errors.fullName?.message}</p>
           </div>
 
           <div className="mb-1">
             <label htmlFor="email">E-mail</label>
-            <input name="email" type="email" className="form-input bg-light-beige px-4 rounded-lg w-full border-0 shadow-sm" {...register('email')} />
+            <input name="email" type="email" className="form-input bg-light-beige hover:brightness-105 duration-300 px-4 rounded-lg w-full border-0 shadow-sm" {...register('email')} />
             <p className="text-xs font-medium mt-1 tracking-wide">{errors.email?.message}</p>
           </div>
 
           <div className="mb-1">
             <label htmlFor="subject">Subject</label>
-            <input name="subject" className="form-input bg-light-beige px-4 rounded-lg w-full border-0 shadow-sm" {...register('subject')} />
+            <input name="subject" className="form-input bg-light-beige hover:brightness-105 duration-300 px-4 rounded-lg w-full border-0 shadow-sm" {...register('subject')} />
             <p className="text-xs font-medium mt-1 tracking-wide">{errors.subject?.message}</p>
           </div>
 
           <div className="mb-1">
             <label htmlFor="contact-message">Message</label>
-            <textarea name="contact-message" className="resize-y rounded-md bg-light-beige w-full border-0 shadow-sm" {...register('contactMessage')}></textarea>
+            <textarea name="contact-message" className="resize-y rounded-md bg-light-beige hover:brightness-105 duration-300 w-full border-0 shadow-sm" {...register('contactMessage')}></textarea>
             <p className="text-xs font-medium mt-1 tracking-wide">{errors.contactMessage?.message}</p>
           </div>
           <Button type="submit" text="Submit" className="mt-6" />

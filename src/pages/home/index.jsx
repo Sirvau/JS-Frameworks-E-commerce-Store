@@ -10,7 +10,6 @@ function HomePage() {
       <div className="w-full h-auto"><HeroSection/></div>
       
      <div>
-     <hr className="my-4 border-oak-brown opacity-30"></hr>
      <h1 className="uppercase text-2xl mx-4 mb-6 tracking-wide">Products</h1>    
      </div>
    

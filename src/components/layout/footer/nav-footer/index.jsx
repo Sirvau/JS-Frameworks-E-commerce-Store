@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom"
 
 function NavFooter() {
     return (
-     <ul className="flex space-x-6 text-sm">
+     <ul className="flex space-x-6 text-md tracking-wide font-semibold">
       
-      <li><NavLink to="/"> Home
+      <li className="hover:scale-105 hover:underline"><NavLink to="/"> Home
       </NavLink></li>
-      <li>
+      <li className="hover:scale-105 hover:underline">
       <NavLink to="/contact"> Contact
       </NavLink>
       </li>
