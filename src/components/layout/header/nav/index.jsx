@@ -9,11 +9,11 @@ function Nav() {
   return (
     <nav className="flex flex-row">
       <ul className="flex flex-row">
-        <li >
+        <li className="hover:scale-105 duration-200" >
         <NavLink to="/contact"> <ContactIcon/>
         </NavLink>
         </li>
-        <li >
+        <li className="hover:scale-105 duration-200" >
         <NavLink to="/checkout"> <ShoppingBagIcon/>
         </NavLink>
         </li>

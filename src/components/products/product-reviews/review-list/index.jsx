@@ -18,7 +18,7 @@ const ReviewList = ({ reviews }) => {
           <p className="text-smtext-dark-brown font-medium">{review.description}</p>
             <StarRating rating={review.rating} />
             </div>
-          
+            <hr className="my-4 border-oak-brown opacity-30"></hr>
      
         </div>
         

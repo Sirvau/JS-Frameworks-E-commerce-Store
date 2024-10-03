@@ -14,10 +14,9 @@ function CheckoutPage() {
 
   return (
     <div className="container lg:w-3/4 xl:w-2/3">
-      <hr className="my-4 border-oak-brown opacity-30"></hr>
       <h1 className="uppercase text-2xl mx-4 tracking-wide">Your shopping bag</h1>
+      <hr className="my-4 border-oak-brown opacity-30"></hr>
       <div><CartList /></div>
-      {/* Use justify-end to align the button to the right */}
       <div className="mx-4 mt-12 w-auto">
         <Button className="" text="Checkout" onClick={handleCheckout} />
       </div>

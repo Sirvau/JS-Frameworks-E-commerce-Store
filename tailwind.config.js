@@ -15,12 +15,12 @@ export default {
         },
         colors: {
           'light-beige': '#F5F1EB',
-          'dark-brown': '#463D35',
+          'dark-brown': '#3B2009',
           'oak-brown': '#6F390D',
           'md-beige': '#EBE3D8',
           'light-orange': '#EFBE95',
-          'filter-brown': '#706256'
-        
+          'filter-brown': '#706256',
+          'button-hover': '#6F390D'
         },
        
       },

@@ -1,7 +1,7 @@
 
 
 function ContactIcon() {
-    return  <div className="text-xs flex flex-col items-center px-4">
+    return  <div className="text-xs flex flex-col items-center px-4 hover:scale-105">
     <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

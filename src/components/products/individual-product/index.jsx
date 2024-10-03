@@ -64,7 +64,7 @@ function IndividualProduct() {
       </div>
       <section className="mt-32 py-6 bg-md-beige">
         <h1 className="uppercase text-2xl ps-6">Reviews</h1>
-        <hr className="my-4 mx-6 border-dark-brown" />
+        <hr className="my-4 border-oak-brown opacity-30"></hr>
         <div className="mx-6"><ReviewList reviews={reviews} /></div>
       </section>
     </div>
