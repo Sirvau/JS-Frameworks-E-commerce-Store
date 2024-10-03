@@ -1,13 +1,22 @@
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Button from '../../button';
+
+
 
 function ProductCard({ product }) {
-  const { id, title, image, price, discountedPrice } = product;
+ {/** Navigation */}
+    const navigate = useNavigate();
+    const navigateToIndividualProduct = () => {
+      navigate(`/individual-product/${id}`);
+    };
 
- {/** Product Discount Calculation */} 
-  const hasDiscount = discountedPrice < price;
-  const discountPercentage = hasDiscount
-    ? ((price - discountedPrice) / price) * 100
-    : 0;
+ {/**Product*/} 
+    const { id, title, image, price, discountedPrice } = product;
+    const hasDiscount = discountedPrice < price;
+    const discountPercentage = hasDiscount
+      ? ((price - discountedPrice) / price) * 100
+      : 0;
 
   return (
     <li className="mx-4 tracking-wide ">
@@ -39,9 +48,7 @@ function ProductCard({ product }) {
             </div>
           </div>
           <div className="flex-grow"></div> 
-          <button className="bg-dark-brown text-light-beige font-semibold w-full px-24 sm:px-12 py-3 mx-auto mt-6 rounded-sm uppercase tracking-widest">
-            View
-          </button>
+          <Button className="rounded-none" text="View" onClick={navigateToIndividualProduct}/>
         </div>
       </Link>
     </li>

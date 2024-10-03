@@ -2,6 +2,7 @@ import useApi from '../../../hooks/api';
 import { useParams } from 'react-router-dom';
 import ReviewList from '../product-reviews/review-list';
 import { useCart } from '../../../context/cart-context'; 
+import Button from '../../button';
 
 function IndividualProduct() {
   let { id } = useParams();
@@ -51,19 +52,14 @@ function IndividualProduct() {
           <div className="flex justify-around mt-6 sm:mt-12">
             {hasDiscount ? (
               <>
-                <p className="font-semibold">{discountedPrice} kr.</p>
+                <p className="font-semibold text-red-400">{discountedPrice} kr.</p>
                 <p className="line-through font-medium">{price} kr.</p>
               </>
             ) : (
               <p>{price} kr.</p>
             )}
           </div>
-          <button
-            className="bg-oak-brown text-light-beige font-semibold px-28 sm:px-20 py-3 mx-auto my-6 mt-6 sm:mt-12 rounded-xl flex justify-self-center"
-            onClick={handleAddToCart} 
-          >
-            Add to bag
-          </button>
+          <Button text="Add to bag" onClick={handleAddToCart} className={"mt-12"} />
         </div>
       </div>
       <section className="mt-32 py-6 bg-md-beige">
