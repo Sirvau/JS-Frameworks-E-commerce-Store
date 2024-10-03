@@ -1,4 +1,4 @@
-import heroBackground from '../../../public/assets/images/hero-background.jpg';
+import heroBackground from '/src/images/hero-background.jpg';
 
 function HeroSection() {
     return (
