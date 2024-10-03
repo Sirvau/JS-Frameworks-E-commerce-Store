@@ -19,7 +19,7 @@ function ProductCard({ product }) {
             </p>
           )}
           <img
-            className="brightness-90 h-[250px] sm:h-[200px] w-full object-cover"
+            className="brightness-75 h-[250px] sm:h-[200px] w-full object-cover"
             src={image.url}
             alt={image.alt || title}
           />
