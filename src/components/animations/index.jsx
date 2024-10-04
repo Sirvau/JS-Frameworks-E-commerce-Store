@@ -38,3 +38,15 @@ export const ShoppingSuccessAnimation = () => {
     );
   };
 
+  export const NoPageAnimation = () => {
+    return (
+      <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-[700px] h-auto mx-auto"> 
+      <DotLottieReact 
+       src="https://lottie.host/c2658cdb-cf4d-4882-bb20-4ac4a92e09e1/LLZn4PF49H.json"
+       loop
+       autoplay
+     />
+   </div>
+    );
+  };
+
