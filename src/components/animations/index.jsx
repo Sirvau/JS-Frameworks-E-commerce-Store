@@ -25,3 +25,16 @@ export const ShoppingSuccessAnimation = () => {
    </div>
     );
   };
+
+  export const EmptyCartAnimation = () => {
+    return (
+      <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-[700px] h-auto mx-auto"> 
+      <DotLottieReact 
+       src="https://lottie.host/e8cf1dae-6d36-4bff-a872-68a436e950fc/MUMaIqi4FR.json"
+       loop
+       autoplay
+     />
+   </div>
+    );
+  };
+

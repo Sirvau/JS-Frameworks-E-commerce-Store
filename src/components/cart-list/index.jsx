@@ -1,4 +1,5 @@
 import { useCart } from "../../context/cart-context";
+import { EmptyCartAnimation } from "../animations";
 
 const CartList = () => {
   const { cart, addToCart, removeFromCart, totalPrice, clearItemFromCart } = useCart();
@@ -7,7 +8,12 @@ const CartList = () => {
     <div>
       <ul>
         {cart.length === 0 ? (
-          <p className="my-40 text-center text-xl">Your cart is empty.</p>
+          <div className="my-20">
+              <EmptyCartAnimation/>
+              <p className=" text-center text-xl font-semibold">Your shopping bag is empty,</p>
+              <p className=" text-center text-lg font-medium mt-2">go fill it up!</p>
+          </div>
+        
         ) : (
           cart.map((product, index) => (
             <div key={product.id}>
