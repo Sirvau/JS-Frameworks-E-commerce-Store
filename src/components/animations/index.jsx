@@ -14,3 +14,14 @@ export const ShoppingSuccessAnimation = () => {
   };
   
  
+  export const ContactAnimation = () => {
+    return (
+      <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-[700px] h-auto mx-auto"> 
+      <DotLottieReact 
+       src="https://lottie.host/f7e41974-b392-41eb-a001-ddc4aea15151/ypjfuxNwjT.json"
+       loop
+       autoplay
+     />
+   </div>
+    );
+  };

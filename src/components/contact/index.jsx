@@ -10,6 +10,7 @@ const schema = yup.object({
   contactMessage: yup.string().min(3, 'Your message should be at least 3 characters.').required('Please enter a message before submitting'),
 }).required();
 
+
 function ContactForm() {
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
@@ -20,33 +21,35 @@ function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row items-center sm:justify-center sm:items-center mx-4 lg:mx-26 xl:mx-36 sm:pe-8 sm:my-10 md:py-16 py-8 rounded-lg">
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-md-beige sm:mx-4 font-medium rounded-md shadow-md w-82 sm:w-2/4 lg:w-2/5 xl:w-1/3">
-        <div className="flex flex-col mx-4 px-5 py-5">
-          <div className="mb-1">
-            <label htmlFor="full-name">Full name</label>
-            <input name="full-name" type="text" className="form-input bg-light-beige hover:brightness-105 duration-300 px-4 rounded-lg w-full border-0 shadow-sm" {...register('fullName')} />
-            <p className="text-xs font-medium mt-1 tracking-wide">{errors.fullName?.message}</p>
+    <div className="flex flex-col sm:flex-row items-center justify-center md:me-1 sm:my-10 my-8 ">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-md-beige px-6 py-8 sm:px-8 sm:py-10 lg:px-10 lg:py-12 rounded-lg shadow-md w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[550px] xl:max-w-[600px]">
+        <div className="flex flex-col space-y-4">
+          
+          <div>
+            <label htmlFor="full-name" className="block mb-2 font-semibold">Full name</label>
+            <input name="full-name" type="text" className="form-input bg-light-beige hover:brightness-105 duration-300 px-4 py-2 rounded-lg w-full border-0 shadow-sm" {...register('fullName')} />
+            <p className="text-xs text-red-500 mt-1">{errors.fullName?.message}</p>
           </div>
 
-          <div className="mb-1">
-            <label htmlFor="email">E-mail</label>
-            <input name="email" type="email" className="form-input bg-light-beige hover:brightness-105 duration-300 px-4 rounded-lg w-full border-0 shadow-sm" {...register('email')} />
-            <p className="text-xs font-medium mt-1 tracking-wide">{errors.email?.message}</p>
+          <div>
+            <label htmlFor="email" className="block mb-2 font-semibold">E-mail</label>
+            <input name="email" type="email" className="form-input bg-light-beige hover:brightness-105 duration-300 px-4 py-2 rounded-lg w-full border-0 shadow-sm" {...register('email')} />
+            <p className="text-xs text-red-500 mt-1">{errors.email?.message}</p>
           </div>
 
-          <div className="mb-1">
-            <label htmlFor="subject">Subject</label>
-            <input name="subject" className="form-input bg-light-beige hover:brightness-105 duration-300 px-4 rounded-lg w-full border-0 shadow-sm" {...register('subject')} />
-            <p className="text-xs font-medium mt-1 tracking-wide">{errors.subject?.message}</p>
+          <div>
+            <label htmlFor="subject" className="block mb-2 font-semibold">Subject</label>
+            <input name="subject" className="form-input bg-light-beige hover:brightness-105 duration-300 px-4 py-2 rounded-lg w-full border-0 shadow-sm" {...register('subject')} />
+            <p className="text-xs text-red-500 mt-1">{errors.subject?.message}</p>
           </div>
 
-          <div className="mb-1">
-            <label htmlFor="contact-message">Message</label>
-            <textarea name="contact-message" className="resize-y rounded-md bg-light-beige hover:brightness-105 duration-300 w-full border-0 shadow-sm" {...register('contactMessage')}></textarea>
-            <p className="text-xs font-medium mt-1 tracking-wide">{errors.contactMessage?.message}</p>
+          <div>
+            <label htmlFor="contact-message" className="block mb-2 font-semibold">Message</label>
+            <textarea name="contact-message" className="resize-y rounded-md bg-light-beige hover:brightness-105 duration-300 px-4 py-2 w-full border-0 shadow-sm" {...register('contactMessage')}></textarea>
+            <p className="text-xs text-red-500 mt-1">{errors.contactMessage?.message}</p>
           </div>
-          <Button type="submit" text="Submit" className="mt-6" />
+
+          <Button type="submit" text="Submit" className="mt-4" />
         </div>
       </form>
     </div>
