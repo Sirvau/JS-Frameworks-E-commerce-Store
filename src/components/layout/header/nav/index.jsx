@@ -8,8 +8,8 @@ import ContactIcon from "../contact";
 function Nav() {
   return (
     <nav className="flex flex-row">
-      <ul className="flex flex-row">
-        <li className="hover:scale-105 duration-200" >
+      <ul className="flex flex-row me-2 sm:me-0">
+        <li className="hover:scale-105 duration-200 me-4" >
         <NavLink to="/contact"> <ContactIcon/>
         </NavLink>
         </li>
