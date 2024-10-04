@@ -50,3 +50,29 @@ export const ShoppingSuccessAnimation = () => {
     );
   };
 
+
+  
+  export const LoaderAnimation = () => {
+    return (
+      <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-[700px] h-auto mx-auto"> 
+      <DotLottieReact 
+       src="https://lottie.host/0b01b4aa-e7dc-43f6-85dd-31cd753fcd53/x8ZkBLUMKb.json"
+       loop
+       autoplay
+     />
+   </div>
+    );
+  };
+
+  
+  export const ErrorAnimation = () => {
+    return (
+      <div className="w-full max-w-[250px] lg:max-w-[350px] xl:max-w-[450px] h-auto mx-auto"> 
+      <DotLottieReact 
+       src="https://lottie.host/785bf596-8b13-439c-adaf-a1723391210f/f6jthKGu1z.json"
+       loop
+       autoplay
+     />
+   </div>
+    );
+  };

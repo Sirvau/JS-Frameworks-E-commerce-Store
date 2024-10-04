@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import ReviewList from '../product-reviews/review-list';
 import { useCart } from '../../../context/cart-context'; 
 import Button from '../../button';
+import { LoaderAnimation } from '../../animations';
+import { ErrorAnimation } from '../../animations';
 
 function IndividualProduct() {
   let { id } = useParams();
@@ -13,15 +15,27 @@ function IndividualProduct() {
   const { addToCart } = useCart(); 
 
   if (isLoading) {
-    return <div>Loading product...</div>;
+    return <div><LoaderAnimation/></div>;
   }
 
   if (isError) {
-    return <div>Error loading product</div>;
+    return <div className="my-20 flex flex-col justify-center items-center">
+      <div>
+        <ErrorAnimation/>
+      <p className="text-center text-xl font-semibold">Unfortunately,</p>
+      <p className="text-center text-lg font-medium mb-6 mt-2"> there was an error loading the product.</p>
+      </div>
+    </div>;
   }
 
   if (!product) {
-    return <div>Product not found</div>;
+    return <div>
+    <div className="my-20 flex flex-col justify-center items-center">
+      <ErrorAnimation/>
+    <p className="text-center text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold">Unfortunately,</p>
+    <p className="text-center text-lg lg:text-xl font-medium mb-6 mt-2">this product was not found.</p>
+  </div>
+ </div>;
   }
 
   const { title, image, description, price, discountedPrice, reviews } = product;
