@@ -80,6 +80,7 @@ npm install --save-dev
 ## Deployment
 
 [Your Shopsphere](https://your-shopsphere.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1f54a365-5463-4a47-a0dc-5a2dd0224fc3/deploy-status)](https://app.netlify.com/sites/your-shopsphere/deploys)
 
 ## Author
 
