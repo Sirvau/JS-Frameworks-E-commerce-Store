@@ -62,7 +62,7 @@ function IndividualProduct() {
           <img className="h-[380px] md:h-[400px] lg:h-[460px] xl:h-[560px] w-full object-cover rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none" 
                src={image.url} alt={image.alt || title} />
           {hasDiscount && (
-            <p className="bg-md-beige text-dark-brown p-2 absolute top-0 right-0 z-10 rounded-bl-lg">
+            <p className="bg-md-beige mix-blend-luminosity w-1/3 text-center tracking-wide text-dark-brown p-2 absolute top-0 right-0 z-10 rounded-bl-lg">
               {discountPercentage.toFixed()}% OFF
             </p>
           )}
@@ -70,7 +70,7 @@ function IndividualProduct() {
 
         {/* Product Details Section */}
         <div className="flex flex-col justify-between w-full md:w-1/2 p-6 lg:p-10 text-center">
-          <h2 className="uppercase text-2xl md:text-3xl font-semibold mb-4">{title}</h2>
+          <h2 className="uppercase text-2xl lg:text-3xl font-semibold mb-4">{title}</h2>
           <p className="text-md lg:text-lg mb-4 font-medium">{description}</p>
           
           {/* Price Section */}
