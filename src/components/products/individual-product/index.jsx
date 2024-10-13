@@ -52,10 +52,10 @@ function IndividualProduct() {
   return (
     <div>
       <div className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-center mt-20 md:mx-10 lg:mx-16 xl:mx-20 shadow-md bg-light-beige ">
-        <div className="w-80 ">
+        <div className="w-80 relative">
           <img className="h-[320px] sm:h-[380px] w-full object-cover brightness-90" src={image.url} alt={image.alt || title} />
           {hasDiscount && (
-            <p className="bg-dark-brown text-light-beige p-2 self-center text-center tracking-wide">
+            <p className="bg-md-beige text-dark-brown p-2 self-center text-center tracking-wide absolute top-0 right-0 z-10 mix-blend-luminosity rounded-bl-lg">
               {discountPercentage.toFixed()}% OFF
             </p>
           )}
